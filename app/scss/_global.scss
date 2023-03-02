@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+    margin: 0;
+    font-size: inherit;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
+    position: relative;
+    color: $black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

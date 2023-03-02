@@ -1,0 +1,57 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "global";
+
+/*  */
+
+.header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: $white;
+    text-align: center;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        padding-top: 70px;
+    }
+    &__suptitle {
+        text-align: center;
+        padding-top: 140px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        opacity: 0.8;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 87px;
+    }
+    &__subtitle {
+        font-size: 42px;
+        line-height: 57px;
+    }
+    &__social {
+        padding-top: auto;
+    }
+}
+.main-btn__white {
+    position: relative;
+    border: none;
+    background: none;
+    color: $white;
+    opacity: 0.8;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/btn.svg);
+        height: 100px;
+        width: 100px;
+    }
+}
