@@ -13,6 +13,13 @@
     height: 100vh;
     color: $white;
     text-align: center;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+    }
     &__logo {
         display: flex;
         justify-content: center;
@@ -36,22 +43,85 @@
         line-height: 57px;
     }
     &__social {
-        padding-top: auto;
+        margin: 0 auto;
+        margin-top: auto;
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+        padding-bottom: 36px;
+    }
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 52%;
     }
 }
+
+/* buttons */
+
 .main-btn__white {
     position: relative;
-    border: none;
-    background: none;
-    color: $white;
-    opacity: 0.8;
+    cursor: pointer;
     &::before {
-        content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(../images/btn.svg);
-        height: 100px;
-        width: 100px;
+        content: "";
+        background-image: url(../images/btn-white/btn-arrow.svg);
+        width: 42px;
+        height: 16px;
+        bottom: 44px;
+        right: 30px;
+    }
+    &::after {
+        position: absolute;
+        content: "записаться на консультацию";
+        width: 258px;
+        bottom: 22px;
+        left: 44px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    svg:hover {
+        stroke: $white;
+        fill: $moss;
+    }
+    &:hover {
+        svg {
+            stroke: $white;
+            fill: $moss;
+        }
+    }
+}
+
+.main-btn__black {
+    position: relative;
+    cursor: pointer;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../images/btn-black/btn-arrow.svg);
+        width: 42px;
+        height: 16px;
+        bottom: 44px;
+        right: 30px;
+    }
+    &::after {
+        position: absolute;
+        content: "записаться на консультацию";
+        color: $black;
+        width: 258px;
+        bottom: 22px;
+        left: 44px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    svg:hover {
+        stroke: $white;
+        fill: $moss;
+    }
+    &:hover {
+        svg {
+            stroke: $white;
+            fill: $moss;
+        }
     }
 }
