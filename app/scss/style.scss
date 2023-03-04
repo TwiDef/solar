@@ -51,9 +51,43 @@
         padding-bottom: 36px;
     }
     &__btn {
-        position: absolute;
+        /* position: absolute;
         top: 50%;
-        right: 52%;
+        right: 52%; */
+        padding-top: 50px;
+        padding-right: 14%;
+    }
+}
+.services {
+    margin: 150px 0;
+    &__title {
+        color: $grey;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &__items {
+        display: flex;
+        column-gap: 90px;
+    }
+    &__item {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item-header {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    &__item-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
     }
 }
 
