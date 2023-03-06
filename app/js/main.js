@@ -1,5 +1,4 @@
 'use strict';
-
 const tabBtns = document.querySelectorAll('.about__tabs-btn');
 const tabItems = document.querySelectorAll('.about__tabs-item');
 
@@ -18,3 +17,16 @@ tabBtns.forEach(btn => {
         }
     });
 });
+
+
+
+const $slider = $('.client__slider').slick({
+    infinite: true,
+    /* autoplay: true, */
+    autoplaySpeed: 3000,
+    prevArrow: '<button class="client__slider-arrow client__slider-arrow--left" type="button"><img src="./images/client/arrLeft.svg" alt="left"></button>',
+    nextArrow: '<button class="client__slider-arrow client__slider-arrow--right" type="button"><img src="./images/client/arrRight.svg" alt="left"></button>',
+
+});
+
+

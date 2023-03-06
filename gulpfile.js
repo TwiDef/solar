@@ -42,17 +42,20 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-
+        'node_modules/slick-carousel/slick/slick.js',
         'app/js/main.js',
-        ])
+    ])
         .pipe(concat('main.min.js'))
-        .pipe(uglify( /* options */ ))
+        .pipe(uglify( /* options */))
         .pipe(dest("app/js"))
         .pipe(browserSync.stream());
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src(['app/scss/style.scss',
+        'node_modules/slick-carousel/slick/slick.scss',
+        'node_modules/slick-carousel/slick/slick-theme.scss',
+    ])
         .pipe(scss({ outputStyle: 'compressed' })) // 'expanded'
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -65,11 +68,11 @@ function styles() {
 
 function build() {
     return src([
-            'app/css/style.min.css',
-            'app/fonts/**/*',
-            'app/js/main.min.js',
-            'app/*.html'
-        ], { base: 'app' })
+        'app/css/style.min.css',
+        'app/fonts/**/*',
+        'app/js/main.min.js',
+        'app/*.html'
+    ], { base: 'app' })
         .pipe(dest('dist'));
 }
 

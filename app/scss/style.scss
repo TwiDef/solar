@@ -224,6 +224,7 @@
     background-size: cover;
     padding: 130px 0;
     color: $white;
+    margin-bottom: 150px;
 
     &__box {
         margin: 0 auto;
@@ -236,6 +237,77 @@
         font-size: 42px;
         line-height: 57px;
         text-align: center;
+    }
+}
+
+.client {
+    margin-bottom: 150px;
+    position: relative;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: $grey;
+        margin-bottom: 60px;
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 90px;
+    }
+
+    &__item {
+        max-width: 555px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__slider {
+        height: 370px;
+    }
+
+    &__slider-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 10%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &--left {
+            left: 10%;
+        }
+
+        &--right {
+            right: 10%;
+
+        }
+    }
+
+    &__descr {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 40px;
+    }
+
+    &__address {
+        padding-left: 50px;
+    }
+
+    &__address-item {
+        font-weight: 500;
+        color: $grey;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn {
+        margin-top: 60px;
     }
 }
 
