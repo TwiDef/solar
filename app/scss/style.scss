@@ -20,11 +20,13 @@
 
         height: 100vh;
     }
+
     &__logo {
         display: flex;
         justify-content: center;
         padding-top: 70px;
     }
+
     &__suptitle {
         text-align: center;
         padding-top: 140px;
@@ -33,15 +35,18 @@
         line-height: 25px;
         opacity: 0.8;
     }
+
     &__title {
         font-weight: 700;
         font-size: 64px;
         line-height: 87px;
     }
+
     &__subtitle {
         font-size: 42px;
         line-height: 57px;
     }
+
     &__social {
         margin: 0 auto;
         margin-top: auto;
@@ -52,11 +57,13 @@
 
         &-link {
             transition: all 0.3s;
+
             &:hover {
                 transform: rotate(360deg);
             }
         }
     }
+
     &__btn {
         /* position: absolute;
         top: 50%;
@@ -65,32 +72,39 @@
         padding-right: 14%;
     }
 }
+
 .services {
     margin: 150px 0;
+
     &__title {
         color: $grey;
         font-weight: 700;
         font-size: 24px;
         line-height: 33px;
     }
+
     &__wrapper {
         margin-top: 60px;
     }
+
     &__items {
         display: flex;
         column-gap: 90px;
     }
+
     &__item {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     &__item-header {
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
     }
+
     &__item-text {
         font-weight: 400;
         font-size: 14px;
@@ -102,6 +116,7 @@
     &__wrapper {
         margin-bottom: 150px;
     }
+
     &__title {
         color: $grey;
         font-weight: 700;
@@ -109,26 +124,31 @@
         line-height: 33px;
         margin-bottom: 60px;
     }
+
     &__items {
         display: flex;
         column-gap: 90px;
     }
+
     &__item {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     &__box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         row-gap: 84px;
     }
+
     &__tabs-item {
         display: flex;
         gap: 40px;
     }
+
     &__tabs-img {
         min-width: 235px;
         height: 200px;
@@ -138,17 +158,20 @@
         display: flex;
         gap: 40px;
     }
+
     &__descr-col {
         width: 235px;
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
+
     &__descr-title {
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
     }
+
     &__description {
         font-weight: 700;
         font-size: 18px;
@@ -164,9 +187,11 @@
         font-size: 18px;
         line-height: 25px;
         margin-right: 40px;
+
         &:focus {
             color: #010;
         }
+
         &::after {
             transition: all 0.3s ease-in-out;
             position: absolute;
@@ -177,15 +202,40 @@
             bottom: 0;
             left: 0;
         }
+
         &:hover::after {
             width: 100%;
         }
     }
+
     &__tabs-item {
         display: none;
+
         &--active {
             display: flex;
         }
+    }
+}
+
+.blockquote {
+    background-image: url(../images/blockquote-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px 0;
+    color: $white;
+
+    &__box {
+        margin: 0 auto;
+        max-width: 673px;
+        width: 100%;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 57px;
+        text-align: center;
     }
 }
 
@@ -194,6 +244,7 @@
 .main-btn__white {
     position: relative;
     cursor: pointer;
+
     &::before {
         position: absolute;
         content: "";
@@ -203,6 +254,7 @@
         bottom: 44px;
         right: 30px;
     }
+
     &::after {
         position: absolute;
         content: "записаться на консультацию";
@@ -212,10 +264,12 @@
         font-size: 18px;
         line-height: 25px;
     }
+
     svg:hover {
         stroke: $white;
         fill: $moss;
     }
+
     &:hover {
         svg {
             stroke: $white;
@@ -227,6 +281,7 @@
 .main-btn__black {
     position: relative;
     cursor: pointer;
+
     &::before {
         position: absolute;
         content: "";
@@ -236,6 +291,7 @@
         bottom: 44px;
         right: 30px;
     }
+
     &::after {
         position: absolute;
         content: "записаться на консультацию";
@@ -246,10 +302,12 @@
         font-size: 18px;
         line-height: 25px;
     }
+
     svg:hover {
         stroke: $white;
         fill: $moss;
     }
+
     &:hover {
         svg {
             stroke: $white;
