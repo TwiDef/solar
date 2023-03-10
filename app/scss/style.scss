@@ -351,6 +351,81 @@
 
 }
 
+.footer {
+    background-image: url(../images/footer-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 50px;
+    color: $white;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 60px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 90px;
+    }
+
+    &__request {
+        width: 50%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $white;
+        padding-bottom: 10px;
+        color: $white;
+    }
+
+    &__contacts {
+        width: 50%;
+    }
+
+    &__addr {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+    }
+
+    &__social {
+        margin-top: auto;
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+        padding-bottom: 36px;
+
+        &-link {
+            transition: all 0.3s;
+
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
 /* buttons */
 
 .main-btn__white {
