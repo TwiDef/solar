@@ -1,4 +1,6 @@
 'use strict';
+
+/* tabs */
 const tabBtns = document.querySelectorAll('.about__tabs-btn');
 const tabItems = document.querySelectorAll('.about__tabs-item');
 
@@ -18,8 +20,7 @@ tabBtns.forEach(btn => {
     });
 });
 
-
-
+/* slider */
 const $slider = $('.client__slider').slick({
     infinite: true,
     autoplay: true,
@@ -29,4 +30,37 @@ const $slider = $('.client__slider').slick({
 
 });
 
+/* validate form */
+const form = document.querySelector('.footer__form');
+const formInputs = document.querySelectorAll('.footer__input');
+const inputPhone = document.querySelector('.footer__input-phone');
 
+function validatePhone(phone) {
+    let re = /^[0-9\s]*$/;
+    return re.test(String(phone));
+}
+
+form.onsubmit = function () {
+    const phoneVal = inputPhone.value;
+    const emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+    formInputs.forEach(input => {
+        if (input.value === '') {
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (emptyInputs.length !== 0) {
+        console.log('inputs not filed');
+        return false;
+    }
+
+    if (!validatePhone(phoneVal)) {
+        inputPhone.classList.add('error');
+        return false;
+    } else {
+        inputPhone.classList.remove('error');
+    }
+};

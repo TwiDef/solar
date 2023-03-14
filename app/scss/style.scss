@@ -515,3 +515,12 @@
         }
     }
 }
+
+/* error */
+.error {
+    border-color: $red;
+
+    &::placeholder {
+        color: $red;
+    }
+}
