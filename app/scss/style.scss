@@ -524,3 +524,15 @@
         color: $red;
     }
 }
+
+.element-show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: .5s ease-in-out;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(8%);
+    transition: .5s ease-in-out;
+}
