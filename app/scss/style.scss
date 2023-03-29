@@ -533,6 +533,14 @@
 
 section {
     opacity: 0;
-    transform: translateY(8%);
+    transform: translateY(30%);
     transition: .5s ease-in-out;
 }
+
+footer {
+    opacity: 0;
+    transform: translateY(30%);
+    transition: .5s ease-in-out;
+}
+
+@import "media";

@@ -25,9 +25,8 @@ const $slider = $('.client__slider').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    prevArrow: '<button class="client__slider-arrow client__slider-arrow--left" type="button"><img src="./images/client/arrLeft.svg" alt="left"></button>',
-    nextArrow: '<button class="client__slider-arrow client__slider-arrow--right" type="button"><img src="./images/client/arrRight.svg" alt="left"></button>',
-
+    /* prevArrow: '<button class="client__slider-arrow client__slider-arrow--left" type="button"><img src="./images/client/arrLeft.svg" alt="left"></button>',
+    nextArrow: '<button class="client__slider-arrow client__slider-arrow--right" type="button"><img src="./images/client/arrRight.svg" alt="left"></button>', */
 });
 
 /* validate form */
@@ -68,22 +67,22 @@ form.onsubmit = function () {
 /* animation */
 function onEntry(entry) {
     entry.forEach(change => {
+        console.log(change);
         if (change.isIntersecting) {
             change.target.classList.add('element-show');
-        } else {
-            change.target.classList.remove('element-show');
         }
     });
 }
 
-let options = {
+const options = {
     root: null,
-    threshold: [0.1]
+    threshold: [0.2]
 };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('section');
+const observer = new IntersectionObserver(onEntry, options);
+const elements = document.querySelectorAll('section');
+const footer = document.querySelector('footer');
 
-
+observer.observe(footer);
 for (let elm of elements) {
     observer.observe(elm);
 }
