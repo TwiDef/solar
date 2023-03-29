@@ -65,6 +65,7 @@ form.onsubmit = function () {
 };
 
 /* animation */
+
 function onEntry(entry) {
     entry.forEach(change => {
         console.log(change);
@@ -76,7 +77,7 @@ function onEntry(entry) {
 
 const options = {
     root: null,
-    threshold: [0.2]
+    threshold: [0.1]
 };
 const observer = new IntersectionObserver(onEntry, options);
 const elements = document.querySelectorAll('section');
@@ -86,3 +87,5 @@ observer.observe(footer);
 for (let elm of elements) {
     observer.observe(elm);
 }
+
+console.log(window.innerWidth);
