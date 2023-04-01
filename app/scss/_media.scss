@@ -103,4 +103,57 @@
             line-height: 50px;
         }
     }
+
+    .client {
+        margin-bottom: 120px;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__items {
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        &__item {
+            margin-bottom: 20px;
+            width: 70%;
+        }
+
+        &__descr {
+            text-align: center;
+        }
+
+        &__address {
+            text-align: center;
+            padding-left: 0;
+            font-size: 17px;
+        }
+
+        &__btn {
+            margin-left: 24%;
+        }
+    }
+
+    .sentence {
+
+        &__wrapper {
+            margin-bottom: 120px;
+        }
+
+        &__items {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        &__item {
+            width: 70%;
+
+        }
+
+
+    }
 }
